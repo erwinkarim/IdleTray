@@ -1,0 +1,9 @@
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Release\IdleTray.exe
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Release\IdleTray.pdb
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\IdleTray.ConfigForm.resources
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\IdleTray.Properties.Resources.resources
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\IdleTray.exe
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\IdleTray.pdb
