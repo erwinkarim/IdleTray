@@ -7,6 +7,8 @@ namespace IdleTray
 {
     static class Program
     {
+
+        public static IdleTrayAppContext idleTrayAppContext;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -15,8 +17,9 @@ namespace IdleTray
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            idleTrayAppContext = new IdleTrayAppContext();
             //Application.Run(new ConfigForm());
-            Application.Run(new IdleTrayAppContext());
+            Application.Run(idleTrayAppContext);
         }
     }
 }

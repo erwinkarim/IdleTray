@@ -25,6 +25,9 @@ namespace IdleTray
         {
             IdleTray.Properties.Settings.Default.FireworkServer = textBox1.Text;
             IdleTray.Properties.Settings.Default.Save();
+
+            Close();
         }
+
     }
 }

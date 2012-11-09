@@ -35,11 +35,12 @@ namespace IdleTray
             idleTimer.Interval = 1000 * 10; //every 10 sec
             idleTimer.Start();
 
-            //new nicon
+            //new icon
             notifyIcon.Icon = IdleTray.Properties.Resources.Icon1;
             notifyIcon.DoubleClick += new EventHandler(ShowConfig);
-            notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] { configMenuItem, exitMenuItem });
+            notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] { configMenuItem, new MenuItem("-"), exitMenuItem });
             notifyIcon.Visible = true;
+            notifyIcon.Text = IdleTray.Properties.Settings.Default.FireworkServer;
         }
 
         void ShowConfig(object sender, EventArgs s)
@@ -65,7 +66,7 @@ namespace IdleTray
             //get idle time
             int idleTime = 0;
 
-            
+            //get last user keyboard/mouse event
             LASTINPUTINFO LastInputInfo = new LASTINPUTINFO();
             LastInputInfo.cbSize = (uint)Marshal.SizeOf(LastInputInfo);
             LastInputInfo.dwTime = 0;
@@ -84,6 +85,11 @@ namespace IdleTray
             objStream.Close();
 
             //MessageBox.Show(Environment.UserName + "@" + Environment.MachineName + ":" + idleTime.ToString());
+        }
+
+        public void setIconText(String text)
+        {
+            notifyIcon.Text = text;
         }
     }
 }
