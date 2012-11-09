@@ -7,3 +7,10 @@ C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\GenerateResource.write.1.tlog
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\IdleTray.exe
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\IdleTray.pdb
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Release\IdleTray.exe.config
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Release\IdleTray.exe.manifest
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Release\IdleTray.application
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\IdleTray.exe.manifest
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\IdleTray.application
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\ResGen.read.1.tlog
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Release\ResGen.write.1.tlog

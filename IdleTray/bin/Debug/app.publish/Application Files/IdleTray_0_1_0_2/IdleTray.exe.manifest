@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="IdleTray.exe" version="0.1.0.2" publicKeyToken="4c0a2e8bc9108b70" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="Resources\Icon1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="IdleTray" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="IdleTray.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IdleTray.exe" size="13824">
+      <assemblyIdentity name="IdleTray" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>WVMcNGeMJW3yo/OuqyiFbqOrWSk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="IdleTray.exe.config" size="888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Y5e2wlB3XCZdwKmiKjpPkT1jmrM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Icon1.ico" size="1078">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>twfZj3GNQ60CR4qg4GE56ORs/Zk=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=hpz1demo\erwinka" issuerKeyHash="3a54410a4959a4306a216368c4730552d55d7085" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>8IyXQi0pIF4koihuvXoDO6DYxfQ=</DigestValue></Reference></SignedInfo><SignatureValue>WbjUC/NtbZmBnbkT4kaywNgtybgvr9HuNs6iZPDxDETh9nbtWd81eEPmBczrtaqosW7F8v8BPA8JicL7eb/5oz9TvR0v2sVG7OdNTD59XZHVDzkuQsDyGemNTjLtC9O1cpAy8NaFUb6B8fyJnzYgFlAyZ+iL14wgbX0u8TZ7DVQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>iYhzgU3IYYUp3Y3GQbH8SDs46GhuKVCNYJttxpljaDO84ND5Ocw+ZDHVNPL/8yOxPWuAAeVE93zwZx59obP4/ne8GQT/yRp+0dIHclva8VSQF1I88vO9I/3WX0OoWVLqUz6Yto3n/zyDJDMqQrIYuSi46EkfNYLF16x7VpbW5gU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="f4c5d8a03b037abd6e28a2245e20292d42978cf0" Description="" Url=""><as:assemblyIdentity name="IdleTray.exe" version="0.1.0.2" publicKeyToken="4c0a2e8bc9108b70" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=hpz1demo\erwinka</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Vn9yCIuY3ahPBNV6B/HVvk9ti7o=</DigestValue></Reference></SignedInfo><SignatureValue>Pf+9TDjYb+xc1cGIpZFZdBzGq4LjCAZU+xhGoM0XUVRBtBPCjlxvMh+pKqhlVF8JEMducIS8wxR1z9Dg0aXJHzcE7er8LPiu3p4bb2xVoVEOBheIuxPPOeI+vGBKfKG/viauuqN3nJkhOhRDB6MTM+0+rc4tkNx7vmVUbj7vgvU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>iYhzgU3IYYUp3Y3GQbH8SDs46GhuKVCNYJttxpljaDO84ND5Ocw+ZDHVNPL/8yOxPWuAAeVE93zwZx59obP4/ne8GQT/yRp+0dIHclva8VSQF1I88vO9I/3WX0OoWVLqUz6Yto3n/zyDJDMqQrIYuSi46EkfNYLF16x7VpbW5gU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB2TCCAUKgAwIBAgIQM+MXUpCzNZNOndNTslysazANBgkqhkiG9w0BAQUFADArMSkwJwYDVQQDHiAAaABwAHoAMQBkAGUAbQBvAFwAZQByAHcAaQBuAGsAYTAeFw0xMjExMDkwMjEwMzNaFw0xMzExMDkwODEwMzNaMCsxKTAnBgNVBAMeIABoAHAAegAxAGQAZQBtAG8AXABlAHIAdwBpAG4AawBhMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJiHOBTchhhSndjcZBsfxIOzjoaG4pUI1gm23GmWNoM7zg0Pk5zD5kMdU08v/zI7E9a4AB5UT3fPBnHn2hs/j+d7wZBP/JGn7R0gdyW9rxVJAXUjzy870j/dZfQ6hZUupTPpi2jef/PIMkMypCshi5KLjoSR81gsXXrHtWltbmBQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAGMc6bdIFQb/w/VW+h1FTQDHfU+3g2CSV8tc7uHD/ucRJS3WR8SmzHVnmVQy4Q21mqt0OLQMSJ5isaEs0HtKfKIj45VkHyzSLq4j+gc+d8ZdhWK2TZ/05y6FyX4dLcFdCBtQLPzMrlX0Ny8/Y1J/cZGlEDd0nzZ/rnH7ukPBaOz9</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

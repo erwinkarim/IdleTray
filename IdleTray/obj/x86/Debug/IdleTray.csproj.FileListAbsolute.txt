@@ -17,3 +17,9 @@ C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.exe.config
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.exe.manifest
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.application
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.exe.manifest
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.application
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\ResGen.write.1.tlog

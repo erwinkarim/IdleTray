@@ -29,5 +29,18 @@ namespace IdleTray
             Close();
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        void textBox1_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                button1_Click(sender, e);
+            }         
+        }
+
     }
 }

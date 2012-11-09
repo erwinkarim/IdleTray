@@ -32,7 +32,7 @@ namespace IdleTray
             //new timer
             Timer idleTimer = new Timer();
             idleTimer.Tick += new EventHandler(idleTimer_Tick);
-            idleTimer.Interval = 1000 * 10; //every 10 sec
+            idleTimer.Interval = 1000 * 120; //2 minutes;
             idleTimer.Start();
 
             //new icon
@@ -78,11 +78,23 @@ namespace IdleTray
             }
 
             //send the message to the server
+          
             string sURL = "http://" + IdleTray.Properties.Settings.Default.FireworkServer + "/idle_user/report?user=" +
                 Environment.UserName + "&host=" + Environment.MachineName + "&idle=" + idleTime.ToString();
             WebRequest webRequest = WebRequest.Create(sURL);
-            Stream objStream = webRequest.GetResponse().GetResponseStream();
-            objStream.Close();
+
+            //WebResponse webResponse = webRequest.GetResponse();
+            try
+            {
+
+                Stream objStream = webRequest.GetResponse().GetResponseStream();
+                objStream.Close();
+            }
+            catch (WebException we)
+            {
+                   //catch web exception
+                Console.Write(we.StackTrace);
+            }
 
             //MessageBox.Show(Environment.UserName + "@" + Environment.MachineName + ":" + idleTime.ToString());
         }
