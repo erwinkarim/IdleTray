@@ -11,15 +11,12 @@ C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.pdb
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.exe
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.pdb
-C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.ConfigForm.resources
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.Properties.Resources.resources
-C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.exe.config
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.exe.manifest
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.application
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.exe.manifest
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.application
-C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\ResGen.read.1.tlog
-C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.csprojResolveAssemblyReference.cache
+C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.csproj.GenerateResource.Cache

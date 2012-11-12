@@ -16,6 +16,7 @@ namespace IdleTray
             InitializeComponent();
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
             textBox1.Text = IdleTray.Properties.Settings.Default.FireworkServer;
@@ -26,13 +27,10 @@ namespace IdleTray
             IdleTray.Properties.Settings.Default.FireworkServer = textBox1.Text;
             IdleTray.Properties.Settings.Default.Save();
 
+
             Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         void textBox1_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {

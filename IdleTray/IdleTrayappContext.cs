@@ -20,11 +20,13 @@ namespace IdleTray
             public uint dwTime;
         }
 
-        NotifyIcon notifyIcon = new NotifyIcon();
+        public NotifyIcon notifyIcon = new NotifyIcon();
         ConfigForm cform = new ConfigForm();
+        HttpWebRequest webRequest;
 
         public IdleTrayAppContext()
         {
+            
             //build the menu
             MenuItem configMenuItem = new MenuItem("Configure server...", new EventHandler(ShowConfig));
             MenuItem exitMenuItem = new MenuItem("Exit", new EventHandler(Exit));
@@ -59,11 +61,12 @@ namespace IdleTray
 
         void idleTimer_Tick(object sender, EventArgs e)
         {
-            //get system uptime
+            //update icon tray text
+            notifyIcon.Text = IdleTray.Properties.Settings.Default.FireworkServer;
+
+            //setup
             int systemUptime = Environment.TickCount;
-            //get user input time
             int LastInputTicks = 0;
-            //get idle time
             int idleTime = 0;
 
             //get last user keyboard/mouse event
@@ -71,6 +74,7 @@ namespace IdleTray
             LastInputInfo.cbSize = (uint)Marshal.SizeOf(LastInputInfo);
             LastInputInfo.dwTime = 0;
 
+            //get idle time
             if (GetLastInputInfo(ref LastInputInfo))
             {
                 LastInputTicks = (int)LastInputInfo.dwTime;
@@ -78,30 +82,29 @@ namespace IdleTray
             }
 
             //send the message to the server
-          
             string sURL = "http://" + IdleTray.Properties.Settings.Default.FireworkServer + "/idle_user/report?user=" +
                 Environment.UserName + "&host=" + Environment.MachineName + "&idle=" + idleTime.ToString();
-            WebRequest webRequest = WebRequest.Create(sURL);
+            webRequest = (HttpWebRequest)WebRequest.Create(sURL);
 
-            //WebResponse webResponse = webRequest.GetResponse();
+            HttpWebResponse webResponse;
+
             try
             {
-
-                Stream objStream = webRequest.GetResponse().GetResponseStream();
-                objStream.Close();
+                webResponse = (HttpWebResponse)webRequest.GetResponse();
             }
             catch (WebException we)
             {
-                   //catch web exception
-                Console.Write(we.StackTrace);
+                notifyIcon.Text = "Error: " + ((HttpWebResponse)we.Response).StatusCode;
             }
-
-            //MessageBox.Show(Environment.UserName + "@" + Environment.MachineName + ":" + idleTime.ToString());
+            //webResponse.Close();
+            
+            
         }
 
         public void setIconText(String text)
         {
             notifyIcon.Text = text;
         }
+
     }
 }

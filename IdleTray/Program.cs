@@ -18,7 +18,6 @@ namespace IdleTray
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             idleTrayAppContext = new IdleTrayAppContext();
-            //Application.Run(new ConfigForm());
             Application.Run(idleTrayAppContext);
         }
     }
