@@ -38,7 +38,7 @@ namespace IdleTray
             idleTimer.Start();
 
             //new icon
-            notifyIcon.Icon = IdleTray.Properties.Resources.Icon1;
+            notifyIcon.Icon = IdleTray.Properties.Resources.Apps_nepomuk;
             notifyIcon.DoubleClick += new EventHandler(ShowConfig);
             notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] { configMenuItem, new MenuItem("-"), exitMenuItem });
             notifyIcon.Visible = true;
