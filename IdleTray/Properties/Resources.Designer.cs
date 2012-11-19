@@ -69,5 +69,15 @@ namespace IdleTray.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon star {
+            get {
+                object obj = ResourceManager.GetObject("star", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

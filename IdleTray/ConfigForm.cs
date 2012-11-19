@@ -14,6 +14,7 @@ namespace IdleTray
         public ConfigForm()
         {
             InitializeComponent();
+            
         }
 
 
