@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Net;
 using System.IO;
+using Microsoft.Win32;
 
 namespace IdleTray
 {
@@ -20,16 +21,21 @@ namespace IdleTray
             public uint dwTime;
         }
 
+        //variable declarations
         public NotifyIcon notifyIcon = new NotifyIcon();
         ConfigForm cform = new ConfigForm();
         HttpWebRequest webRequest;
+        MenuItem runAtStartUpItem, configMenuItem, exitMenuItem;
+        RegistryKey rk = Registry.CurrentUser.OpenSubKey
+                   ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
 
         public IdleTrayAppContext()
         {
             
             //build the menu
-            MenuItem configMenuItem = new MenuItem("Configure server...", new EventHandler(ShowConfig));
-            MenuItem exitMenuItem = new MenuItem("Exit", new EventHandler(Exit));
+            runAtStartUpItem = new MenuItem("Run at Startup", new EventHandler(RunAtStartUp));
+            configMenuItem = new MenuItem("Configure server...", new EventHandler(ShowConfig));
+            exitMenuItem = new MenuItem("Exit", new EventHandler(Exit));
 
             //new timer
             Timer idleTimer = new Timer();
@@ -40,9 +46,27 @@ namespace IdleTray
             //new icon
             notifyIcon.Icon = IdleTray.Properties.Resources.star;
             notifyIcon.DoubleClick += new EventHandler(ShowConfig);
-            notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] { configMenuItem, new MenuItem("-"), exitMenuItem });
+            notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] {runAtStartUpItem, configMenuItem, 
+                   new MenuItem("-"), exitMenuItem });
             notifyIcon.Visible = true;
             notifyIcon.Text = IdleTray.Properties.Settings.Default.FireworkServer;
+
+            //check if this app should run at startup
+            if (rk.GetValue(Application.ProductName, Application.ExecutablePath.ToString()) != null)
+                runAtStartUpItem.Checked = true;
+            else
+                runAtStartUpItem.Checked = false;
+        }
+
+        private void RunAtStartUp(object sender, EventArgs e)
+        {
+            runAtStartUpItem.Checked = !runAtStartUpItem.Checked;
+
+            //ensure that it'd run at startup or not
+            if (runAtStartUpItem.Checked)
+                rk.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
+            else
+                rk.DeleteValue(Application.ProductName, false);
         }
 
         void ShowConfig(object sender, EventArgs s)
