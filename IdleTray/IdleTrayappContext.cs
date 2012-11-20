@@ -25,7 +25,7 @@ namespace IdleTray
         public NotifyIcon notifyIcon = new NotifyIcon();
         ConfigForm cform = new ConfigForm();
         HttpWebRequest webRequest;
-        MenuItem runAtStartUpItem, configMenuItem, exitMenuItem;
+        MenuItem runAtStartUpItem, configMenuItem, exitMenuItem, sendNowMenuItem;
         RegistryKey rk = Registry.CurrentUser.OpenSubKey
                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         DateTime lastupdate; 
@@ -34,10 +34,11 @@ namespace IdleTray
         {
             
             //build the menu
+            sendNowMenuItem = new MenuItem("Send Data Now", new EventHandler(idleTimer_Tick));
             runAtStartUpItem = new MenuItem("Run at Startup", new EventHandler(RunAtStartUp));
             configMenuItem = new MenuItem("Configure server...", new EventHandler(ShowConfig));
             exitMenuItem = new MenuItem("Exit", new EventHandler(Exit));
-
+            
             //new timer
             Timer idleTimer = new Timer();
             idleTimer.Tick += new EventHandler(idleTimer_Tick);
@@ -47,7 +48,7 @@ namespace IdleTray
             //new icon
             notifyIcon.Icon = IdleTray.Properties.Resources.star;
             notifyIcon.DoubleClick += new EventHandler(ShowConfig);
-            notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] {runAtStartUpItem, configMenuItem, 
+            notifyIcon.ContextMenu = new ContextMenu(new MenuItem[] {sendNowMenuItem, runAtStartUpItem, configMenuItem, 
                    new MenuItem("-"), exitMenuItem });
             notifyIcon.Visible = true;
             notifyIcon.Text = IdleTray.Properties.Settings.Default.FireworkServer;
