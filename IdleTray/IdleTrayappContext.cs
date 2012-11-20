@@ -12,9 +12,9 @@ namespace IdleTray
 {
     class IdleTrayAppContext : ApplicationContext
     {
+        //idle time variables
         [DllImport("user32.dll")]
         static extern bool GetLastInputInfo(ref LASTINPUTINFO plii);
-
         internal struct LASTINPUTINFO
         {
             public uint cbSize;
@@ -28,6 +28,7 @@ namespace IdleTray
         MenuItem runAtStartUpItem, configMenuItem, exitMenuItem;
         RegistryKey rk = Registry.CurrentUser.OpenSubKey
                    ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        DateTime lastupdate; 
 
         public IdleTrayAppContext()
         {
@@ -115,10 +116,14 @@ namespace IdleTray
             try
             {
                 webResponse = (HttpWebResponse)webRequest.GetResponse();
+                notifyIcon.Text = IdleTray.Properties.Settings.Default.FireworkServer + "\n Last Update:" + DateTime.Now; 
             }
             catch (WebException we)
             {
-                notifyIcon.Text = "Error: " + ((HttpWebResponse)we.Response).StatusCode;
+                if (we.Response != null)
+                    notifyIcon.Text = "Error: " + ((HttpWebResponse)we.Response).StatusCode;
+                else
+                    notifyIcon.Text = "Null Response from server";
             }
             //webResponse.Close();
             
