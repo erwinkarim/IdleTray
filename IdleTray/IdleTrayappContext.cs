@@ -117,7 +117,9 @@ namespace IdleTray
             try
             {
                 webResponse = (HttpWebResponse)webRequest.GetResponse();
-                notifyIcon.Text = IdleTray.Properties.Settings.Default.FireworkServer + "\n Last Update:" + DateTime.Now; 
+                notifyIcon.Text = IdleTray.Properties.Settings.Default.FireworkServer + "\n Last Update:" + DateTime.Now;
+                webResponse.Close();
+
             }
             catch (WebException we)
             {
