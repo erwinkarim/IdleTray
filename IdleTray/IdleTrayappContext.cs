@@ -23,7 +23,8 @@ namespace IdleTray
 
         //variable declarations
         public NotifyIcon notifyIcon = new NotifyIcon();
-        ConfigForm cform = new ConfigForm();
+        ConfigForm cform;
+
         HttpWebRequest webRequest;
         MenuItem runAtStartUpItem, configMenuItem, exitMenuItem, sendNowMenuItem;
         RegistryKey rk = Registry.CurrentUser.OpenSubKey
@@ -32,7 +33,8 @@ namespace IdleTray
 
         public IdleTrayAppContext()
         {
-            
+            cform = new ConfigForm(notifyIcon);
+   
             //build the menu
             sendNowMenuItem = new MenuItem("Send Data Now", new EventHandler(idleTimer_Tick));
             runAtStartUpItem = new MenuItem("Run at Startup", new EventHandler(RunAtStartUp));
@@ -113,7 +115,7 @@ namespace IdleTray
             webRequest = (HttpWebRequest)WebRequest.Create(sURL);
 
             HttpWebResponse webResponse;
-
+            
             try
             {
                 webResponse = (HttpWebResponse)webRequest.GetResponse();

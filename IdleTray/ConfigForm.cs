@@ -14,10 +14,16 @@ namespace IdleTray
         public ConfigForm()
         {
             InitializeComponent();
-            
         }
 
+        NotifyIcon notifyIconref;
 
+        public ConfigForm(NotifyIcon iconRef)
+        {
+            InitializeComponent();
+            notifyIconref = iconRef;
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             textBox1.Text = IdleTray.Properties.Settings.Default.FireworkServer;
@@ -27,7 +33,7 @@ namespace IdleTray
         {
             IdleTray.Properties.Settings.Default.FireworkServer = textBox1.Text;
             IdleTray.Properties.Settings.Default.Save();
-
+            notifyIconref.Text = textBox1.Text;
 
             Close();
         }
