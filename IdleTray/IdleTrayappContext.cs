@@ -129,9 +129,7 @@ namespace IdleTray
                     notifyIcon.Text = "Error: " + ((HttpWebResponse)we.Response).StatusCode;
                 else
                     notifyIcon.Text = "Null Response from server";
-            }
-            //webResponse.Close();
-            
+            }            
             
         }
 
