@@ -44,7 +44,7 @@ namespace IdleTray
             //new timer
             Timer idleTimer = new Timer();
             idleTimer.Tick += new EventHandler(idleTimer_Tick);
-            idleTimer.Interval = 1000 * 120; //2 minutes;
+            idleTimer.Interval = 1000 * 60 * 10; //10 minutes;
             idleTimer.Start();
 
             //new icon
