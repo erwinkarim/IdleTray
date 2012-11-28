@@ -20,3 +20,5 @@ C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.application
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.csprojResolveAssemblyReference.cache
 C:\Users\erwinka\documents\visual studio 2010\Projects\IdleTray\IdleTray\obj\x86\Debug\IdleTray.csproj.GenerateResource.Cache
+C:\Users\erwinka\Documents\Visual Studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.exe.CodeAnalysisLog.xml
+C:\Users\erwinka\Documents\Visual Studio 2010\Projects\IdleTray\IdleTray\bin\Debug\IdleTray.exe.lastcodeanalysissucceeded
